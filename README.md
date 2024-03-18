@@ -1,4 +1,5 @@
-Budget Calculator Application
+Budget Calculator Application.
+
 Welcome to the Budget Calculator Application! This project aims to streamline website budget calculations by enhancing user interaction through checkboxes, input fields, and buttons. The application dynamically adjusts the total price based on the user's selected options.
 
 Objectives
@@ -20,10 +21,10 @@ Technologies Used
 - HTML/CSS: Markup and styling languages for structuring and styling the UI.
   
 Installation
-Clone the repository: git clone ITAcademy-S6-Budgets
-Navigate to the project directory: cd ITAcademy-S6-Budgets
-Install dependencies: npm install
-Start the development server: npm start
+- Clone the repository: git clone ITAcademy-S6-Budgets
+- Navigate to the project directory: cd ITAcademy-S6-Budgets
+- Install dependencies: npm install
+- Start the development server: npm start
 
 Usage
 - Visit the application URL in your web browser.
@@ -34,4 +35,5 @@ Usage
   
 Credits
 This project was created as a part of IT Academy - React.
+
 Developed by Khrystsina Kozak
