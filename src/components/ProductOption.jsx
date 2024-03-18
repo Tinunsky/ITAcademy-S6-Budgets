@@ -1,20 +1,24 @@
 import { useContext } from "react";
 import { AdditionalOption } from "./AdditionalOption";
-import { BudgetContext } from "./pages/Calculator";
+import { BudgetContext } from "../contexts/BudgetProvider";
 
 export function ProductOption({ option, index }) {
   const { handleCheck } = useContext(BudgetContext);
   const { description, price, isChecked, additionalOptions } = option;
+  
 
   return (
-    <div className="d-flex justify-content-center align-items-center">
     <div
-      className="container m-2 p-3 border shadow"
-      style={{ maxWidth: "700px", minHeight: "120px", borderRadius: "20px" }}
+      className="container mt-2 pt-4 shadow"
+      style={{
+        minHeight: "120px",
+        borderRadius: "20px",
+        border: isChecked === true ? "2px solid #52a5fe " : "",
+      }}
     >
-      <div className="row pt-3 align-items-center">
+      <div className="row p-3">
         <div className="col-sm-6 text-start fs-5 fw-medium">{description}</div>
-        <div className="col-sm-4 text-center fs-4 fw-bolder ">{price}€</div>
+        <div className="col-sm-4 text-center fs-4 fw-bolder">{price}€</div>
         <div className="col-sm-2 text-center d-flex justify-content-around align-items-center">
           <input
             type="checkbox"
@@ -23,8 +27,8 @@ export function ProductOption({ option, index }) {
           />
           <div className="fst-italic">Add</div>
         </div>
-        {isChecked && (
-          <div className="mt-5">
+        {isChecked && additionalOptions && (
+          <div className="col mt-5">
             {additionalOptions?.map(
               (additionalOption, additionalOptionIndex) => (
                 <AdditionalOption
@@ -40,7 +44,6 @@ export function ProductOption({ option, index }) {
           </div>
         )}
       </div>
-    </div>
     </div>
   );
 }

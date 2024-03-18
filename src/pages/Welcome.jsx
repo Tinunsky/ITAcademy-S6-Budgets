@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { PATHS } from "../router";
 
 export function Welcome() {
   return (
@@ -14,7 +15,7 @@ export function Welcome() {
         </p>
       </div>
       <div className="button-container">
-        <Link to="/calculator">
+        <Link to={PATHS.CALCULATOR}>
           <button className="router-button">Go to calculator</button>
         </Link>
       </div>

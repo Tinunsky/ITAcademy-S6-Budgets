@@ -1,11 +1,13 @@
 import { createBrowserRouter } from "react-router-dom";
-import { Calculator } from "./pages/Calculator";
 import { Welcome } from "./pages/Welcome";
-import 'bootstrap/dist/css/bootstrap.min.css';
+import { Budgets } from "./pages/Budgets";
 
+export const PATHS = {
+  ROOT: "/",
+  CALCULATOR: "/onlineCalculator",
+};
 
 export const router = createBrowserRouter([
-    { path: "/", element: <Welcome /> },
-    { path: "/calculator", element: <Calculator />}
-]
-) 
+  { path: PATHS.ROOT, element: <Welcome /> },
+  { path: PATHS.CALCULATOR, element: <Budgets /> },
+]);

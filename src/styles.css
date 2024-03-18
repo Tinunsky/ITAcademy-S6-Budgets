@@ -1,3 +1,8 @@
+html {
+ font-family: Arial, sans-serif;
+ font-size: 14px;
+}
+
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -11,7 +16,6 @@ input[type="number"] {
 }
 
 .welcome-container {
-  font-family: Arial, sans-serif;
   margin: 0 auto;
   padding: 50px;
   display: flex;
@@ -51,3 +55,4 @@ input[type="number"] {
 .router-button:hover {
   background-color: #0056b3;
 }
+
