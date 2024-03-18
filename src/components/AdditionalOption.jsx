@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import { BudgetContext } from './../contexts/BudgetProvider';
+import { BudgetContext } from "./../contexts/BudgetProvider";
 
 export function AdditionalOption({
   name,
@@ -60,6 +60,7 @@ export function AdditionalOption({
               appearance: "textfield",
             }}
             value={amount}
+            readOnly
           />
         </div>
         <div className="col-auto p-1">
@@ -94,8 +95,8 @@ export function AdditionalOption({
               ></button>
             </div>
             <div className="modal-body">
-              Add as many {name} as you need for your project. Each one 
-              has an additional cost of {price}€.
+              Add as many {name} as you need for your project. Each one has an
+              additional cost of {price}€.
             </div>
           </div>
         </div>
