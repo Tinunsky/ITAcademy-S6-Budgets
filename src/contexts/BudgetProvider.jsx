@@ -56,7 +56,7 @@ export const BudgetProvider = ({ children }) => {
       setProductOptions(productOptionsResult);
     }
   }
-
+  
   return (
     <BudgetContext.Provider
       value={{ handleCheck, productOptions, handleAmount, budget, setBudget }}
