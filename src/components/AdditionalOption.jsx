@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext} from "react";
 import { BudgetContext } from "./../contexts/BudgetProvider";
 
 export function AdditionalOption({
@@ -9,7 +9,6 @@ export function AdditionalOption({
   price,
 }) {
   const { handleAmount } = useContext(BudgetContext);
-  const [showModal, setShowModal] = useState(false);
 
   const circleButtonStyle = {
     width: "20px",
@@ -17,6 +16,7 @@ export function AdditionalOption({
     borderRadius: "80px",
     padding: "0px",
     fontSize: "0.75em",
+    
     backgroundColor: "#cfe2ff",
   };
 
@@ -30,9 +30,10 @@ export function AdditionalOption({
           <button
             className="btn m-1"
             style={circleButtonStyle}
-            onClick={() => setShowModal(true)}
+            data-bs-toggle="modal"
+            data-bs-target="#modal"
           >
-            <i className="bi" style={{ fontSize: "0.8em" }}>
+            <i style={{ fontSize: "0.8em" }}>
               ?
             </i>
           </button>
@@ -77,9 +78,9 @@ export function AdditionalOption({
       </div>
 
       <div
-        className={`modal fade ${showModal ? "show" : ""}`}
+        className="modal fade"
+        id="modal"
         style={{
-          display: showModal ? "block" : "none",
           backgroundColor: "rgba(207, 226, 255, 0.5)",
           position: "fixed",
         }}
@@ -91,8 +92,8 @@ export function AdditionalOption({
               <button
                 type="button"
                 className="btn-close"
-                onClick={() => setShowModal(false)}
-              ></button>
+                data-bs-dismiss="modal">
+              </button>
             </div>
             <div className="modal-body">
               Add as many {name} as you need for your project. Each one has an
