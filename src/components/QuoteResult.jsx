@@ -38,7 +38,7 @@ export function QuoteResult() {
                 <div style={{ fontWeight: "bold" }}>Services contracted:</div>
                 {clientQuote.services?.map((service, i) => {
                   return (
-                    <div style={{ fontSize: "0.9em" }} key={i}>
+                    <div style={{ fontSize: "0.9em" }} key={`service ${i}`}>
                       - {service}
                     </div>
                   );

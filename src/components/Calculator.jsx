@@ -27,7 +27,7 @@ export function Calculator() {
     <>
       <div>
         {productOptions.map((element, i) => (
-          <ProductOption key={i} option={element} index={i} />
+          <ProductOption key={`product ${i}`} option={element} index={i} />
         ))}
       </div>
       <div
